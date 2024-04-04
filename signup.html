@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>signUp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="image/clglogo.png">
+    <style>
+  * {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+.clgimg {
+  width:100%;
+  margin:0px auto;
+}
+.heading {
+  font-size: large;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom:10px;
+  color: #000000;
+}
+.logo {
+  width:100%;
+  padding: 0%;
+}
+.bar{
+    margin-left: 55px;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  float: right;
+  background: #363636;
+  padding:0px 0px ;
+  display: flex;
+}
+nav a {
+  color: #fffdfd;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+nav ul {
+  display: flex;
+  }
+.nav {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 800;
+
+}
+.nav * {
+  box-sizing: border-box;
+  transition: all .35s ease;
+  display: flex;
+}
+.nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: .6em ;
+  padding: 0;
+}
+.nav a {
+  padding: .3em .7em;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+}
+.nav a::before,
+.nav a::after {
+  content: '';
+  height: 8px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+.nav a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #2bdffa;
+  border-right: 3px solid #2bdffa;
+  transform: translate(-100%, 50%);
+  display: flex;
+}
+.nav a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #2bdffa;
+  border-left: 3px solid #2bdffa;
+  display: flex;
+  transform: translate(100%, -50%)
+} 
+.nav a:hover:before,
+.nav a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+.nav a:hover {
+  color: #2bdffa;
+}
+.nav a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 10px 13px;
+  text-decoration: none;
+}
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .bar,.nav,li,a,nav {
+      float: none;
+      display: block;
+      text-align: center;
+      margin-left: 950px;
+      bottom: 50px;
+  }
+}
+.formdiv{
+margin-top: 50px;
+margin-bottom: 700px;
+}
+
+
+
+@media (max-width: 640px) {
+  .container-nav {
+    text-align: center;
+  }
+
+  .container-nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0.8em 0;
+  }
+}
+        body{
+            margin: 0px;
+            padding: 0;
+            font-family: sans-serif,Arial, Helvetica, sans-serif;
+            background: rgb(226, 226, 226);
+        }
+        .box{
+            display: block;
+            background:rgb(190, 190, 190);
+            width: 400px;
+            padding: 15px;
+            position: absolute;
+            top: 500px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 10px;
+            box-shadow: 7px 7px 15px rgb(56, 56, 56);
+        }
+        img{
+            padding: 10px 20px; 
+        }
+        h1{
+            position: absolute;
+            top: 20px;
+            left: 170px;
+            font-weight: lighter;
+        }
+        .leftitem{
+            display: inline-block;
+            width: 100px;
+            padding: 25px 20px;
+        }
+        .rightitem{
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            width: 200px;
+            height: 30px;
+            background: none;
+            border: 2px solid goldenrod;
+            border-radius: 5px;
+        }
+        .box input[type="button"]{
+            display: block; 
+            margin: auto;
+            padding: 5px 10px;
+            background: none;
+            border: 2px solid goldenrod;
+            border-radius: 10px;
+            transition: padding .3s;
+        }
+        .box input[type="button"]:hover{
+            color: #004068;
+            padding: 10px 30px;
+            cursor: pointer;
+            background: goldenrod;
+            
+        }
+        #bottomlink{
+            text-decoration: none;
+            
+            font-size: 14px;
+        }
+        #bottomlink:hover{
+            font-size: 16px;
+            color: #004068;
+            
+        }
+        .dropitem{
+            color: black;
+            background: goldenrod;
+        }
+        .submitbut{
+          text-align: center;
+        }
+        .submitbut:hover{
+            text-align: center;
+            color: #004068;
+            padding: 10px 30px;
+            cursor: pointer;
+            background: goldenrod;
+            border-radius: 8px;
+
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function myForm()
+        {
+        var firstname =
+            document.forms["form"]["firstname"].value;
+        var lastname =
+            document.forms["form"]["lastname"].value;
+        var email =
+            document.forms["form"]["email"].value;
+        var password =
+            document.forms["form"]["password"].value;
+
+        if (firstname == "") {
+          alert("Please enter your first name.");
+            return false;
+        }
+        if (lastname == "") {
+          alert("Please enter your last name.");
+            return false;
+        }
+        if (email == "") {
+        alert("Please enter a valid e-mail address.");
+        return false;
+        }
+        if (!email.includes("@")) {
+        alert("Invalid mail ID.");
+        return false;
+        }
+        if(password.length <6){
+            alert("password should be atleast 6 characters long");
+            return false;
+    
+        }
+        }
+    </script>
+       <div class="clgimg">
+        <img src="image/VCET.png" class="logo">
+      </div>
+     
+      <div class="container-nav">
+      <nav>
+        <div class="bar"> 
+          <ul class="nav">
+          <li><a href="index.html"><bold>Home</bold></a> </li>
+          <li><a href="course.html"><bold>Course</bold></a> </li>
+          <li><a href="admission.html"><bold>Admission</bold></a> </li>
+          <li><a href="about.html"><bold>About us</bold></a> </li>
+          <li><a href="gallery.html"><bold>Gallery</bold></a> </li>
+          <li><a href="event.html"><bold>Events</bold></a> </li>
+          <li><a href="contact.html"><bold>Contact</bold></a> </li>
+          </ul>
+       </div> 
+       </nav>
+       </div>
+    <div class="formdiv">
+        <form class="box" action="#" name="form">
+        <div id="top">
+        <a href="index.html"><img src="image/clglogo.png" alt="college logo" width="50px" height="70px"></a>
+        <h1><b>SignUp</h1>
+        </div>
+        <label class="leftitem" for="firstname"><b>First Name</label>
+        <input class="rightitem" type="text" name="firstname" required><br>
+        <label class="leftitem" for="lastname"><b>Last Name</label>
+        <input class="rightitem" type="text" name="lastname"><br>
+        <label class="leftitem" for="email"><b>Email</label>
+        <input class="rightitem" type="email" name="email" required><br>
+        <label class="leftitem" for="usertype"><b>User Type</label>
+        <select class="rightitem" name="usertype" id="utype">
+            <option class="dropitem" value="Parent"><b>Faculty</option>
+            <option class="dropitem" value="Faculty"><b>Parent</option>
+            <option class="dropitem" value="Student"><b>Student</option>
+        </select> <br>  
+        <label class="leftitem" for="password" ><b>Password</label>
+        <input class="rightitem" type="password" name="password" required>
+        <p class = "submitbut" onclick="return myForm()"><a href="dashboard.html"><bold>Signup</bold></a></p>
+        <!--<input type="button" name="submit" class = "submitbut" value="SignUp" onclick="return myForm()">-->
+        <BR><BR><a id="bottomlink" href="login.html"><b>Already a user</a>
+    </form>
+</div>  
+    <br>
+</body>
+</html>
